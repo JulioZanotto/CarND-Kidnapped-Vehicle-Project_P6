@@ -18,6 +18,7 @@
 
 #include "helper_functions.h"
 
+// Easier with so many usage from std
 using namespace std;
 
 void ParticleFilter::init(double x, double y, double theta, double std[]) {
@@ -145,7 +146,8 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
    *   and the following is a good resource for the actual equation to implement
    *   (look at equation 3.33) http://planning.cs.uiuc.edu/node99.html
    */
-
+  
+  // Code snippets from Mentors help in Kidnapped Project
   double sig_x = std_landmark[0];
   double sig_y = std_landmark[1];
   double gauss_norm = 1 / (2 * M_PI * sig_x * sig_y);
